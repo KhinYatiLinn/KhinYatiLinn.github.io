@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+</head>
+<body>
+    <h1>Exam Result</h1>
+    <form name="ExamResult">
+        <lable for="TC">Turbo C</lable>
+        <input type = "number" name= "TC" id= "TC" placeholder= "Enter Turbo C Marks" required>
+        <br><br>
+        <lable for="J">Java</lable>
+        <input type = "number" name= "J" id= "J" placeholder= "Enter Java Marks">
+        <br><br>
+        <lable for="JS">JavaScript</lable>
+        <input type= "number" name= "JS" id= "JS" placeholder= "Enter JavaScript Marks">
+        <br><br>
+        <button type="button" onclick="Result()">Result</button>
+    </form>
+    <script>
+        function Result()
+        {
+            // alert("Hello");
+            let TC = document.ExamResult.TC.value;
+            console.log(TC);
+            let J = document.ExamResult.J.value;
+            console.log(J);
+            let JS = document.ExamResult.JS.value;
+            console.log(JS);
+
+            // if (TC >= 50 && J >=50 && JS >= 50)
+            // {
+            //     document.write('<h1>This Student is Pass!</h1>');
+            // }
+            // else
+            // {
+            //     document.write('<h1>This Student is Fail!</h1>');
+            // }
+            // TC >= 80 && TC <= 100 || J >= 80 && J <= 100 || JS >= 80 && JS <= 100
+            if (TC <=49 || J <= 49 || JS <=49)
+            {
+                document.write('<h1>This Student is Fail.</h1>')
+            }
+            else if (TC >= 50 && TC <= 79 || J >= 50 && J <= 79 || JS >= 50 && JS <= 79)
+            {
+                document.write('<h1>This Student is Pass!</h1>');
+            }
+            else
+            {
+                document.write('<h1>This Student is Distinction.</h1>')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .error
+        {
+            border-color: red;
+        }
+        small
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 align= 'center'>Calculator</h1>
+    <form for="Calculator" align='center'>
+        <lable for="N1">Number One:</lable>
+        <input type="number" name="N1" id="N1">
+        <br><br>
+        <lable for="N2">Number Two:</lable>
+        <input type="number" name="N2" id="N2">
+        <br><br>
+        <lable for="Res">Result:</lable>
+        <input type="number" name="Res" id="Res" readonly>
+        <br></br>
+        <button type="submit" onclick="Add()">Add</button>
+    </form>
+    <script>
+        function ForValidation()
+        {
+            let Number1 = document.querySelector('N1').value;
+            let Number2 = document.querySelector('N2').value;
+
+            let N1 = docucment.querySelector(#N1);
+            let N2 = document.querySelector(#N2);
+            let N1_Err = document.querySelector('#N1_Err');
+            let N2_Err = document.querySelector('#N2_Err');
+            console.log(Number1 + Number2);
+
+            if (Number1 == '' || Number2 == '')
+            {
+                N1.RemoveAttribute{'class'};
+                N2.RemoveAttribute{'class'};
+                N1_Err.innerHTML = '';
+                N2_Err.innerHTML = '';
+                if (Number1 == '')
+                {
+                    showError(N1_err,N1,'Number One is Require');
+                }
+                if (Number2 == '')
+                {
+                    showError(N2_err,N2,'Number Two is Require');
+                }
+                function showError(N1)
+            }
+        }
+        function Add()
+        {
+            let Number1 = document.querySelector('#N1').value;
+            let Number2 = document.querySelector('#N2').value;
+            console.log(typeof(Number1));
+            let Result = Number(Number1) + Number(Number2);
+            console.log(Result);
+            document.querySelector('#Res').value = Result;
+        }
+    </script>
+</body>
+</html>
